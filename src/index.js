@@ -75,3 +75,8 @@ server.post("/api/project", async (req, res) => {
         cardUrl: ""
     });
 })
+
+// Servidor de estáticos
+
+const staticServerPath = "./web/dist";
+server.use(express.static(staticServerPath));
