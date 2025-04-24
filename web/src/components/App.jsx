@@ -1,6 +1,18 @@
 import "../scss/App.scss";
+import { useEffect } from "react";
+
+const URL_PRODUCTION = "https://proyectosmolones.onrender.com";
+const URL_LOCAL = "http/localhost:5001";
+// condición ? camino1 : camino2
+const URL = process.env.NODE_ENV === "development" ? URL_LOCAL : URL_PRODUCTION;
 
 function App() {
+
+    useEffect(() => {
+        fetch(`${URL}/api/projects`)
+        //...
+    }, [])
+
     return (
         <>
             <header><h1>Pagina web</h1></header>
