@@ -78,5 +78,5 @@ server.post("/api/project", async (req, res) => {
 
 // Servidor de estáticos
 
-const staticServerPath = "./web/dist";
+const staticServerPath = "./src/public-react";
 server.use(express.static(staticServerPath));
